@@ -4,15 +4,66 @@
 
 # Site
 title: Linya-Ironman
-subtitle: "每天都要得到，不论是什么"
-description: "每天都要得到，不论是什么"
+# 主頁subtitle
+subtitle:
+  enable: true
+  # 打字效果
+  effect: true
+  # 循環或者只打字一次
+  loop: false
+  # source調用第三方服務
+  # source: false 關閉調用
+  # source: 1  調用搏天api的隨機語錄（簡體）
+  # source: 2  調用一言網的一句話（簡體）
+  # source: 3  調用一句網（簡體）
+  # source: 4  調用今日詩詞（簡體
+  # subtitle 會先顯示 source , 再顯示 sub 的內容
+  source: false
+  # 如果有英文逗號' , ',請使用轉義字元 &#44;
+  # 如果有英文雙引號' " ',請使用轉義字元 &quot;
+  # 開頭不允許轉義字元，如需要，請把整個句子用雙引號包住
+  # 例如 ”&quotNever put off till tomorrow what you can do today&quot"
+  # 如果關閉打字效果，subtitle只會顯示sub的第一行文字
+  sub:
+    - 每天都要得到，不论是什么
+    - Never put off till tomorrow what you can do today
+description: ""
 keywords:
 author: Linya
 language: zh
 timezone: ""
 
+## 菜单
+menu:
+  Home: / || fas fa-home
+  Archives: /archives/ || fas fa-archive
+  Tags: /tags/ || fas fa-tags
+  Categories: /categories/ || fas fa-folder-open
+  List||fas fa-list:
+    Music: /music/ || fas fa-music
+    Movie: /movies/ || fas fa-video
+  Link: /link/ || fas fa-link
+  About: /about/ || fas fa-heart
+
 # 代码高亮
-#highlight_theme: mac
+highlight_theme: mac
+
+# 首页顶部图片
+index_img: "https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fn.sinaimg.cn%2Fsinacn10106%2F492%2Fw1920h972%2F20190519%2F70d9-hwzkfpv4189132.jpg&refer=http%3A%2F%2Fn.sinaimg.cn&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1637945908&t=067bf42775b3020af9a2f0a7fe98eba4"
+
+# 运行时间
+runtimeshow:
+  enable: true
+  publish_date: 6/7/2018 00:00:00
+  ##網頁開通時間
+  #格式: 月/日/年 時間
+  #也可以寫成 年/月/日 時間
+
+## 文章页面出现目录
+toc:
+  enable: true
+  number: true
+  style_simple: true
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
@@ -46,8 +97,6 @@ render_drafts: false
 post_asset_folder: false
 relative_link: false
 future: true
-# highlight_theme: mac
-highlight_copy: false
 highlight:
   enable: true
   line_number: true
