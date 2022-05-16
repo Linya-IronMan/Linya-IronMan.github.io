@@ -745,6 +745,11 @@
   dependencies:
     "sprintf-js" "^1.0.3"
 
+"hexo-image-link@^0.0.3":
+  "integrity" "sha512-wyCCLzNnjzZCefo102Zrc3sGJIJSvK5TJTgv0pLEb8GRuHunN1De5h57qpbzVF2id4oQmBSIiugGmslG8U9VsA=="
+  "resolved" "https://registry.npmmirror.com/hexo-image-link/-/hexo-image-link-0.0.3.tgz"
+  "version" "0.0.3"
+
 "hexo-log@^2.0.0":
   "integrity" "sha1-HcyOlgApsIshmU/ixWxOPWNG6JM="
   "resolved" "https://registry.npmmirror.com/hexo-log/download/hexo-log-2.0.0.tgz?cache=0&sync_timestamp=1633702209646&other_urls=https%3A%2F%2Fregistry.npmmirror.com%2Fhexo-log%2Fdownload%2Fhexo-log-2.0.0.tgz"
