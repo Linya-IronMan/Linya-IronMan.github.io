@@ -6,64 +6,64 @@
 title: Linya-Ironman
 # 主頁subtitle
 subtitle:
-  enable: true
-  # 打字效果
-  effect: true
-  # 循環或者只打字一次
-  loop: false
-  # source調用第三方服務
-  # source: false 關閉調用
-  # source: 1  調用搏天api的隨機語錄（簡體）
-  # source: 2  調用一言網的一句話（簡體）
-  # source: 3  調用一句網（簡體）
-  # source: 4  調用今日詩詞（簡體
-  # subtitle 會先顯示 source , 再顯示 sub 的內容
-  source: false
-  # 如果有英文逗號' , ',請使用轉義字元 &#44;
-  # 如果有英文雙引號' " ',請使用轉義字元 &quot;
-  # 開頭不允許轉義字元，如需要，請把整個句子用雙引號包住
-  # 例如 ”&quotNever put off till tomorrow what you can do today&quot"
-  # 如果關閉打字效果，subtitle只會顯示sub的第一行文字
-  sub:
-    - 每天都要得到，不论是什么
-    - Never put off till tomorrow what you can do today
-description: ""
+    enable: true
+    # 打字效果
+    effect: true
+    # 循環或者只打字一次
+    loop: false
+    # source調用第三方服務
+    # source: false 關閉調用
+    # source: 1  調用搏天api的隨機語錄（簡體）
+    # source: 2  調用一言網的一句話（簡體）
+    # source: 3  調用一句網（簡體）
+    # source: 4  調用今日詩詞（簡體
+    # subtitle 會先顯示 source , 再顯示 sub 的內容
+    source: false
+    # 如果有英文逗號' , ',請使用轉義字元 &#44;
+    # 如果有英文雙引號' " ',請使用轉義字元 &quot;
+    # 開頭不允許轉義字元，如需要，請把整個句子用雙引號包住
+    # 例如 ”&quotNever put off till tomorrow what you can do today&quot"
+    # 如果關閉打字效果，subtitle只會顯示sub的第一行文字
+    sub:
+        - 每天都要得到，不论是什么
+        - Never put off till tomorrow what you can do today
+description: ''
 keywords:
 author: Linya
 language: zh
-timezone: ""
+timezone: ''
 
 ## 菜单
 menu:
-  Home: / || fas fa-home
-  Archives: /archives/ || fas fa-archive
-  Tags: /tags/ || fas fa-tags
-  Categories: /categories/ || fas fa-folder-open
-  List||fas fa-list:
-    Music: /music/ || fas fa-music
-    Movie: /movies/ || fas fa-video
-  Link: /link/ || fas fa-link
-  About: /about/ || fas fa-heart
+    Home: / || fas fa-home
+    Archives: /archives/ || fas fa-archive
+    Tags: /tags/ || fas fa-tags
+    Categories: /categories/ || fas fa-folder-open
+    List||fas fa-list:
+        Music: /music/ || fas fa-music
+        Movie: /movies/ || fas fa-video
+    Link: /link/ || fas fa-link
+    About: /about/ || fas fa-heart
 
 # 代码高亮
 highlight_theme: mac
 
 # 首页顶部图片
-index_img: "https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fn.sinaimg.cn%2Fsinacn10106%2F492%2Fw1920h972%2F20190519%2F70d9-hwzkfpv4189132.jpg&refer=http%3A%2F%2Fn.sinaimg.cn&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1637945908&t=067bf42775b3020af9a2f0a7fe98eba4"
+index_img: 'https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fn.sinaimg.cn%2Fsinacn10106%2F492%2Fw1920h972%2F20190519%2F70d9-hwzkfpv4189132.jpg&refer=http%3A%2F%2Fn.sinaimg.cn&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1637945908&t=067bf42775b3020af9a2f0a7fe98eba4'
 
 # 运行时间
 runtimeshow:
-  enable: true
-  publish_date: 6/7/2018 00:00:00
-  ##網頁開通時間
-  #格式: 月/日/年 時間
-  #也可以寫成 年/月/日 時間
+    enable: true
+    publish_date: 6/7/2018 00:00:00
+    ##網頁開通時間
+    #格式: 月/日/年 時間
+    #也可以寫成 年/月/日 時間
 
 ## 文章页面出现目录
 toc:
-  enable: true
-  number: true
-  style_simple: true
+    enable: true
+    number: true
+    style_simple: true
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
@@ -71,8 +71,8 @@ url: http://example.com
 permalink: :year/:month/:day/:title/
 permalink_defaults:
 pretty_urls:
-  trailing_index: true # Set to false to remove trailing 'index.html' from permalinks
-  trailing_html: true # Set to false to remove trailing '.html' from permalinks
+    trailing_index: true # Set to false to remove trailing 'index.html' from permalinks
+    trailing_html: true # Set to false to remove trailing '.html' from permalinks
 
 # Directory
 source_dir: source
@@ -89,35 +89,35 @@ new_post_name: :title.md # File name of new posts
 default_layout: post
 titlecase: false # Transform title into titlecase
 external_link:
-  enable: true # Open external links in new tab
-  field: site # Apply to the whole site
-  exclude: ""
+    enable: true # Open external links in new tab
+    field: site # Apply to the whole site
+    exclude: ''
 filename_case: 0
 render_drafts: false
 post_asset_folder: false
 relative_link: false
 future: true
 highlight:
-  enable: true
-  line_number: true
-  auto_detect: false
-  tab_replace: ""
-  wrap: true
-  hljs: false
+    enable: true
+    line_number: true
+    auto_detect: false
+    tab_replace: ''
+    wrap: true
+    hljs: false
 prismjs:
-  enable: false
-  preprocess: true
-  line_number: true
-  tab_replace: ""
+    enable: false
+    preprocess: true
+    line_number: true
+    tab_replace: ''
 
 # Home page setting
 # path: Root path for your blogs index page. (default = '')
 # per_page: Posts displayed per page. (0 = disable pagination)
 # order_by: Posts order. (Order by date descending by default)
 index_generator:
-  path: ""
-  per_page: 10
-  order_by: -date
+    path: ''
+    per_page: 10
+    order_by: -date
 
 # Category & Tag
 default_category: uncategorized
@@ -135,7 +135,7 @@ meta_generator: true
 date_format: YYYY-MM-DD
 time_format: HH:mm:ss
 ## updated_option supports 'mtime', 'date', 'empty'
-updated_option: "mtime"
+updated_option: 'mtime'
 
 # Pagination
 ## Set per_page to 0 to disable pagination
@@ -156,6 +156,13 @@ theme: butterfly
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
-  type: git
-  repository: https://github.com/Linya-IronMan/Linya-IronMan.github.io.git
-  branch: main
+    type: git
+    repository: https://github.com/Linya-IronMan/Linya-IronMan.github.io.git
+    branch: main
+# 1. description： 只顯示description
+# 2. both： 優先選擇description，如果沒有配置description，則顯示自動節選的內容
+# 3. auto_excerpt：只顯示自動節選
+# 4. false： 不顯示文章內容
+index_post_content:
+    method: 2
+    length: 2000 # if you set method to 2 or 3, the length need to config

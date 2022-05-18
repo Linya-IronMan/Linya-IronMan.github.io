@@ -5,13 +5,19 @@ tags:
     - 面试题
     - JavaScript
     - 问题
+# description: 
+#     1. 数组方式定义 Map <br/>
+#     2. 迭代类型与枚举类型的判断方式 <br/>
+#     3. JS中，哪些是迭代类型；哪些是枚举类型 <br/>
+#     4. for await of 遍历 Promise，取代 Promise.all <br/>
+#     5. Promise 并发与非并发
 ---
 
-- [ ] forEach 是通过迭代器还是枚举实现的
-- [ ] 迭代和枚举有什么区别
-- [ ] 迭代器模式
-
-<!-- more -->
+1. 数组方式定义 Map <br/>
+2. 迭代类型与枚举类型的判断方式 <br/>
+3. JS中，哪些是迭代类型；哪些是枚举类型 <br/>
+4. for await of 遍历 Promise，取代 Promise.all <br/>
+5. Promise 并发与非并发
 
 # for in 与 for of 有什么区别
 
@@ -137,9 +143,89 @@ undefined
 
 通过 next 函数，一步一步向下执行的叫做迭代器
 
+# for await ... of
+
+用于遍历多个 Promise 函数，实际上就是 `Promise.all` 的替代品
+
+```javascript
+
+function createPromise(val) {
+    return new Promise(resolve => {
+        setTimeout(() => {
+            resolve(val)
+        }, 1000);
+    })
+}
+
+(async function() {
+    const p1 = createPromise(100)
+    const p2 = createPromise(200)
+    const p3 = createPromise(300)
+
+    // 笨笨地打印
+    const res1 = await p1;
+    console.log(res1)
+    const res2 = await p2;
+    console.log(res2)
+    const res3 = await p3;
+    console.log(res3)
+
+    // Promise.all 
+    const list = [p1, p2, p3]
+    Promise.all(list).all((res) => console.log(res))
+    
+    // for await of 
+    for await (let res of list) {
+        console.log(res)
+    }
+
+
+})
+
+```
+
+场景：用户选择了很多图片，需要传递到服务端。应该如何调用 Promise？
+-  两种调用方式，一种是并发上传；另一种就是一个一个上传
+-  区别在于什么时候创建 Promsie
+
+上面的代码都是将 Promise 全部创建完毕，然后遍历获取结果
+
+下面的代码，一个一个创建 Promise，就可以实现一个一个上传图片。等上一个异步执行完毕后再执行下一个异步
+
+```javascript
+function createPromise(val) {
+    return new Promise(resolve => {
+        setTimeout(() => {
+            resolve(val)
+        }, 1000);
+    })
+}
+
+(async function() {
+    const p1 = createPromise(100)
+    const p2 = createPromise(200)
+    const p3 = createPromise(300)
+
+    const res1 = await createPromise(100);
+    console.log(res1)
+    const res2 = await createPromise(200);
+    console.log(res2)
+    const res3 = await createPromise(300);
+    console.log(res3)
+
+    const arr = [10, 20, 30]
+    for (let num of arr) {
+        const res = await createPromise(num);
+        console.log(res);
+    }
+})
+
+```
+
+
 # 总结
 
 - `for...in` 用于可枚举数据，如对象、数组、字符串；得到 `key`
 - `for...of` 用于可迭代数据，如数组、字符串、Map、Set；得到 `value`
-
+- `for await of` 遍历 Promise
 
