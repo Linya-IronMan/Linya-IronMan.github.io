@@ -2,7 +2,6 @@
 title: 'WebComponent: 原生WebComponent'
 tags:
   - WebComponent
-  - 待补充
 hello: "slot is 的原生使用方式没有"
 ---
 
@@ -77,7 +76,7 @@ export default MyComp
 
 操作 ShadowDOM的方式和操作常规DOM一样。
 
-除了:fucus-within，Shadow DOM 内部的元素始终不会影响到它外部的元素
+除了:focus-within，Shadow DOM 内部的元素始终不会影响到它外部的元素
 
 可以使用 `Element.attachShadow()`  方法来将一个 shadow root 附加到任何一个元素上
 
@@ -101,7 +100,7 @@ shadow.appendChild(para);
 
 # Template Slot
 
-用于创建一个灵活填充的 Shaddow DOM 模板
+用于创建一个灵活填充的 Shadow DOM 模板
 
 
 ```html
@@ -110,7 +109,7 @@ shadow.appendChild(para);
 </template>
 ```
 
-下面的代码，不会展示在你的页面中，直到你用 JavaScript 获取它的引用，然后添加到DOM中， 如下面的代码：
+上面的代码，不会展示在你的页面中，直到你用 JavaScript 获取它的引用，然后添加到DOM中， 如下面的代码：
 
 ```javascript
 let template = document.getElementById('my-paragraph');
@@ -119,6 +118,8 @@ document.body.appendChild(templateContent);
 ```
 
 参考：[WebComponent Template Slot 的使用](https://blog.csdn.net/m0_37566424/article/details/90738645)
+
+slot的定义和使用与vue中插槽的使用并无太大区别，通过name设置具名插槽，可以定向插入内容
 
 ```html
 <template id="custome-fieldset">
