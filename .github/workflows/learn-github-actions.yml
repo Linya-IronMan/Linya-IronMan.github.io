@@ -1,0 +1,22 @@
+# github 残酷 actions 选项卡中的工作流程名称
+name: learn-github-actions
+# 指定此工作流程的触发器。这里指定的是推送事件。每次有人将更改推送或合并拉取请求，都会触发。
+on: [push]
+# 将工作流程中运行的所有作业组合到一起
+jobs:
+  # 定义了名为 check-bats-version 的作业，子键将定义作业的属性。
+  check-bats-version:
+    # 将作业配置在最新版本的 Ubuntu Linux 中运行。
+    runs-on: ubuntu-latest
+# 将 check-bats-version 作业中所有步骤组合在一起，此部分下嵌套的每一项都是一个单独的操作或 shell 脚本
+    steps:
+# 指定此步骤将运行 actions/checkout 操作的 v3。这是将存储库签出到运行器上的操作，允许对代码（生成和测试工具）运行脚本或其他操作。
+# 每当工作流将针对存储库中的代码运行时，都应使用签出操作
+      - uses: actions/checkout@v3
+# 将使用 actions/setup@v3 来安装指定版本的 Node.js 会将 node 命令和npm命令放在 PATH 中
+      - uses: actions/setup-node@v3
+        with:
+          node-version: '14'
+# 
+      - run: npm install -g bats
+      - run: bats -v
