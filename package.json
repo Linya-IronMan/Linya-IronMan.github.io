@@ -1,0 +1,17 @@
+{
+  "name": "Linya-IronMan.github.io",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/Linya-IronMan/Linya-IronMan.github.io.git",
+  "author": "林崖 <cdthanye32@163.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "vitepress": "^1.0.0-rc.45",
+    "vue": "^3.4.21"
+  },
+  "scripts": {
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "docs:serve": "vitepress serve docs"
+  }
+}
